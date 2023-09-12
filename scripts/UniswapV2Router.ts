@@ -24,10 +24,8 @@ async function main() {
     const value = ethers.parseEther("0.2")
   
     await UNI.connect(impersonter).approve(uniswapV2, ethers.parseEther("200"))
-  
-    await uniswapV2.addLiquidityETH(uniToken, uniAmountDesired, amountuniMin, amountETHMin, to, deadline, {value: value})
 
- 
+    await uniswapV2.connect(impersonter).addLiquidityETH(uniToken, uniAmountDesired, amountuniMin, amountETHMin, to, deadline, {value: value})
     
     
     
