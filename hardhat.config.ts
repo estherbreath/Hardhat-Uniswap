@@ -4,14 +4,14 @@ import 'dotenv/config'
 require('dotenv').config()
 
 const config: HardhatUserConfig = {
-  solidity: '0.8.19',
-  networks: {
-    sepolia: {
-      url: process.env.SEPOLIARPC,
-      //@ts-ignore
-      accounts: [process.env.PRIVATEKEY,process.env.PRIVATEKEY2,process.env.PRIVATEKEY3,process.env.PRIVATEKEY4],
-    },
-  },
+  solidity: '0.8.20',
+  // networks: {
+  //   sepolia: {
+  //     // url: process.env.SEPOLIARPC,
+  //     //@ts-ignore
+  //     accounts: [process.env.PRIVATEKEY,process.env.PRIVATEKEY2,process.env.PRIVATEKEY3,process.env.PRIVATEKEY4],
+  //   },
+  // },
 
   etherscan: {
     // Your API key for Etherscan
